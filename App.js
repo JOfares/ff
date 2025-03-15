@@ -29,46 +29,12 @@ const PatientInfo = () => (
   </div>
 );
 
-const Cardio = () => (
-  <div className="container">
-    <h2>Medical History - Cardiovascular System</h2>
-    <form>
-      <label><input type="checkbox" /> Hypertension</label><br />
-      <label><input type="checkbox" /> CAD</label><br />
-      <label><input type="checkbox" /> CHF</label><br />
-      <label><input type="checkbox" /> Arrhythmia</label><br />
-      <label><input type="checkbox" /> Pacemaker/ICD</label><br />
-      <label><input type="checkbox" /> Heart Valve Replacement</label><br />
-      <label>RCRI Score: <input type="number" /></label><br />
-      <label>NSQIP Score: <input type="number" /></label><br />
-      <label>DASI Score: <input type="number" /></label><br />
-    </form>
-    <Link to="/respiratory" className="button">Next</Link>
-  </div>
-);
-
-const Respiratory = () => (
-  <div className="container">
-    <h2>Respiratory System</h2>
-    <form>
-      <label><input type="checkbox" /> Asthma</label><br />
-      <label><input type="checkbox" /> COPD</label><br />
-      <label><input type="checkbox" /> OSA</label><br />
-      <label><input type="checkbox" /> CPAP Use</label><br />
-      <label>Mallampati Score: <input type="number" /></label><br />
-    </form>
-    <Link to="/renal" className="button">Next</Link>
-  </div>
-);
-
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/patient-info" element={<PatientInfo />} />
-        <Route path="/cardio" element={<Cardio />} />
-        <Route path="/respiratory" element={<Respiratory />} />
       </Routes>
     </Router>
   );
